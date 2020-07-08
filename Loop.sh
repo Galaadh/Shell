@@ -10,9 +10,10 @@ NUMBERS=(951 402 984 651 360 69 408 319 601 485 980 507 725 547 544 615 83 165 1
 
 CPT=0
 for CPT in ${NUMBERS[@]} ; do
-	echo $CPT
         
 	if [ $CPT = 237 ] ; then
 		break
+	elif [ $(($CPT % 2)) = 0 ] ; then
+			echo "$CPT"
 	fi
 done
